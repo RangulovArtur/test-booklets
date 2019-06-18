@@ -7,6 +7,5 @@ export const history = createBrowserHistory({ basename: "/" });
 const modules = {
   animals
 };
-
 const initialState = window.initialReduxState;
 export const store = configureStore(history, initialState, modules);

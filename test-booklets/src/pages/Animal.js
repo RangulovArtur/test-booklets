@@ -1,6 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import AnimalContainer from "../containers/Animal";
+import FoodSelectContainer from "../containers/FoodSelect";
 
-const Animal = () => <p>Конкретное животное</p>;
+const Animal = props => (
+  <>
+    <p>Конкретное животное</p>
+    <AnimalContainer id = {props.match.params.id}/>
+    <FoodSelectContainer />
+  </>
+);
 
 export default Animal;
+
+

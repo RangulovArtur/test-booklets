@@ -4,16 +4,18 @@ import { history } from "./store";
 import Animals from "./pages/Animals";
 import Animal from "./pages/Animal";
 import Layout from "./layouts";
+import Error404 from "./pages/Error404";
 
 const App = () => (
-  <Layout>
-    <Router history={history}>
+  <Router history={history}>
+    <Layout>
       <Switch>
-        <Route path="/" component={Animals} />
-        <Route path="/animal/:id" component={Animal} />
+        <Route path="/" exact component={Animals} />
+        <Route path="/animal/:id" exact component={Animal} />
+        <Route component={Error404} />
       </Switch>
-    </Router>
-  </Layout>
+    </Layout>
+  </Router>
 );
 
 export default App;
